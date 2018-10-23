@@ -7,10 +7,6 @@ const tempDir = require('temp-dir');
 const getPath = () => path.join(tempDir, uniqueString());
 
 module.exports.file = opts => {
-	opts = Object.assign({
-		extension: ''
-	}, opts);
-
 	if (opts.name) {
 		if (opts.extension) {
 			throw new Error('The `name` and `extension` options are mutually exclusive');
